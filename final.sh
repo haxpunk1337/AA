@@ -50,7 +50,6 @@ print_banner() {
     print_and_log "${CYAN}macOS Version: $(/usr/bin/sw_vers -productVersion)${NC}"
     print_and_log ""
 }
-
 # Security check functions
 check_filevault() {
     print_header "FileVault Status"
