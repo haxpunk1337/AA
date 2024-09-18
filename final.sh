@@ -11,22 +11,25 @@ NC='\033[0m' # No Color
 # Output file
 OUTPUT_FILE="$(dirname "$0")/northernlight_security_assessment_$(date +%Y%m%d_%H%M%S).txt"
 
-# Utility functions
+# Function to print and log
 print_and_log() {
     echo -e "$1"
     echo -e "$1" >> "$OUTPUT_FILE"
 }
 
+# Function to print section headers
 print_header() {
     print_and_log ""
     print_and_log "${CYAN}## $1${NC}"
     print_and_log "-------------------"
 }
 
+# Function to check if a command exists
 command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
+# Ensure the `defaults` file exists before reading it
 safe_defaults_read() {
     if [ -f "$1" ]; then
         /usr/bin/defaults read "$1" "$2" 2>/dev/null
