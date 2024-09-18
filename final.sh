@@ -11,12 +11,6 @@ NC='\033[0m' # No Color
 # Output file
 OUTPUT_FILE="$(dirname "$0")/northernlight_security_assessment_$(date +%Y%m%d_%H%M%S).txt"
 
-# Function to print and log
-print_and_log() {
-    echo -e "$1"
-    echo -e "$1" >> "$OUTPUT_FILE"
-}
-
 # Function to print section headers
 print_header() {
     print_and_log ""
