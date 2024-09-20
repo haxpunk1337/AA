@@ -673,9 +673,9 @@ main() {
     check_browser_passwords
     check_ssh_keys
     check_cron_jobs
-	check_safari_passwords
+    check_safari_passwords
     check_firefox_passwords
-	check_reverse_shell
+    check_reverse_shell
     check_privilege_escalation
     check_unusual_processes
     check_network_connections
